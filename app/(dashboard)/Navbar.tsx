@@ -5,8 +5,6 @@ import { Settings } from "lucide-react"
 import { SidebarHeader, } from "@/components/ui/sidebar"
 import { FaChargingStation } from "react-icons/fa";
 import { FaHome } from "react-icons/fa";
-import { GrMapLocation } from "react-icons/gr";
-import { PiSolarPanelFill } from "react-icons/pi";
 import { useSidebar } from "@/components/ui/sidebar"
 import { BiChevronRight,BiChevronLeft } from "react-icons/bi";
 import { usePathname } from 'next/navigation'
@@ -40,16 +38,16 @@ const items = [
       url: "/control",
       icon: GiProcessor,
     },
-    {
-      title: "Fleet",
-      url: "/fleet",
-      icon: GrMapLocation,
-    },
-    {
-      title: "Power Group",
-      url: "/powergroup",
-      icon: PiSolarPanelFill,
-    },
+    // {
+    //   title: "Fleet",
+    //   url: "/fleet",
+    //   icon: GrMapLocation,
+    // },
+    // {
+    //   title: "Power Group",
+    //   url: "/powergroup",
+    //   icon: PiSolarPanelFill,
+    // },
     {
       title: "Settings",
       url: "/settings",
