@@ -1,25 +1,26 @@
 import React from 'react'
-import CardsComponent from './components/CardsComponent'
-import ChartWire1 from './components/ChartWire1'
-// import Chart1 from './components/chart1'
-// import Chart2 from './components/chart2'
-// import Chart3 from './components/chart3'
-// import Chart4 from './components/chart4'
-// import Chart5 from './components/chart5'
-// import Chart6 from './components/chart6'
-// import Chart7 from './components/chart7'
+import TreeChartsV2 from './components/ThreeChartsV2'
+import SmartMeterChart from './components/SmartMeterChart'
+import BatteryMonitor from './components/BatteryMonitor'
+import PowerGrid from './components/PowerGrid'
 
 const page = () => {
   return (
     <div className='w-full flex flex-col gap-8'>
-      <CardsComponent/>
-      <ChartWire1/>
-      {/* <Chart2/>
-      <Chart3/>
-      <Chart5/>
-      <Chart6/>
-      <Chart7/>
-      <Chart4/> */}
+      <div className='flex w-full gap-4'>
+        <div className='w-[50%]'>
+          <TreeChartsV2/>
+        </div>
+        <div className='w-[50%] flex flex-col gap-4'>
+          <div className='w-full flex gap-2'>
+            <SmartMeterChart/>
+            <BatteryMonitor/>
+          </div>
+          <div className='w-full'>
+            <PowerGrid/>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }

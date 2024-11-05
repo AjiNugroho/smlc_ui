@@ -18,7 +18,7 @@ const LoginPage=()=> {
 
     if (result.success) {
       // Redirect to the original destination or dashboard
-      const redirectTo = searchParams.get('redirect') || '/'
+      const redirectTo = searchParams.get('redirect') || '/depots'
       router.push(redirectTo)
     } else {
       console.log(error)
