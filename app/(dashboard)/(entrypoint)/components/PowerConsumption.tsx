@@ -44,11 +44,10 @@ const PowerConsumption = () => {
   const totalPower = Object.values(meterData).reduce((acc, data) => {
     return acc + data.reduce((sum, reading) => sum + reading.power, 0);
   }, 0);
-
   const pieData = Object.keys(meterData).map((meter) => ({
     name: `Meter ${meter.slice(-1)}`,
     value: meterData[meter].reduce((sum, reading) => sum + reading.power, 0),
-    color: `hsl(${meter.slice(-1) * 60}, 70%, 50%)`,
+    color: `hsl(${Number(meter.slice(-1)) * 60}, 70%, 50%)`,
   }));
 
   return (
