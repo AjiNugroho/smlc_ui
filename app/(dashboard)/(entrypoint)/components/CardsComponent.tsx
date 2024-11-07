@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import React from 'react'
-import { PiMoneyDuotone } from "react-icons/pi";
+import {PiChargingStationFill } from "react-icons/pi";
 import { GiElectric } from "react-icons/gi";
 import { MdElectricCar } from "react-icons/md";
 import { IoIosFlashOff } from "react-icons/io";
@@ -10,11 +10,10 @@ import { RiPercentFill } from "react-icons/ri";
 const CardsComponent = () => {
   const cardItemContent = [
     {
-      title:'Total Revenue',
-      value:10000,
+      title:'Total Charger',
+      value:3245,
       delta:20,
-      icon:<PiMoneyDuotone  size={24}/>,
-      unit:'MYR'
+      icon:<PiChargingStationFill  size={24}/>
     },
     {
       title:'Total Sessions',

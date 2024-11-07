@@ -9,6 +9,8 @@ import { useSidebar } from "@/components/ui/sidebar"
 import { BiChevronRight,BiChevronLeft } from "react-icons/bi";
 import { usePathname } from 'next/navigation'
 import { GiProcessor } from "react-icons/gi";
+import prasLogo from '@/public/logoprasaranadepo.png'
+import Image from 'next/image'
  
 import {
   Sidebar,
@@ -63,8 +65,14 @@ const Navbar = () => {
   return (
     <Sidebar collapsible='icon' className='border-none shadow-xl'>
         <SidebarHeader className='h-12 w-full flex items-center relative text-[#008ccc] rounded-r-lg'>
-        
-            <p className={` ${state==='expanded'?'block':'hidden'} text-xl font-semibold`}>Smart Controller</p>
+              <Image
+                    className={` ${state==='expanded'?'block':'hidden'}`}
+                    src={prasLogo}
+                    alt='logo'
+                    width={160}
+                    height={80}
+                    />
+            {/* <p className={` ${state==='expanded'?'block':'hidden'} text-xl font-semibold`}>Smart Controller</p> */}
             <div className={`p-1 text-2xl rounded-lg bg-[#008ccc] text-white absolute ${state==='expanded'?'right-0 ':'top-3 right-2'} `} onClick={toggleSidebar}>
                 {state==='expanded'?<BiChevronLeft/>:<BiChevronRight/>}
             </div>

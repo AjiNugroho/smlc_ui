@@ -55,37 +55,37 @@ const TreeChartsV2: FC = () => {
   ];
 
   const connectors: Connector[] = [
-    { id: 1, status: 'available', label: 'Type-1', startY:50,startX:0 },
-    { id: 2, status: 'occupied', label: 'CCS',startY:50,startX:50 },
-    { id: 3, status: 'error', label: 'CHAdeMO',startY:50,startX:100 },
-    { id: 4, status: 'available', label: 'Type-2',startY:50,startX:150 },
-    { id: 5, status: 'available', label: 'Type-1',startY:150,startX:0 },
-    { id: 6, status: 'available', label: 'Type-2',startY:150,startX:50 },
-    { id: 7, status: 'occupied', label: 'CHAdeMO',startY:150,startX:100 },
-    { id: 8, status: 'available', label: 'CCS',startY:150,startX:150 },
-    { id: 9, status: 'available', label: 'Type-3',startY:250,startX:0 },
-    { id: 10, status: 'available', label: 'Type-4',startY:250,startX:50 },
-    { id: 11, status: 'available', label: 'Type-1',startY:250,startX:100 },
-    { id: 12, status: 'available', label: 'Type-2',startY:250,startX:150 },
+    { id: 1, status: 'available', label:'CCS2', startY:50,startX:0 },
+    { id: 2, status: 'occupied', label:'CCS2',startY:50,startX:50 },
+    { id: 3, status: 'error', label:'CCS2',startY:50,startX:100 },
+    { id: 4, status: 'available', label:'CCS2',startY:50,startX:150 },
+    { id: 5, status: 'available', label:'CCS2',startY:150,startX:0 },
+    { id: 6, status: 'available', label:'CCS2',startY:150,startX:50 },
+    { id: 7, status: 'occupied', label:'CCS2',startY:150,startX:100 },
+    { id: 8, status: 'available', label:'CCS2',startY:150,startX:150 },
+    { id: 9, status: 'available', label:'CCS2',startY:250,startX:0 },
+    { id: 10, status: 'available', label:'CCS2',startY:250,startX:50 },
+    { id: 11, status: 'available', label:'CCS2',startY:250,startX:100 },
+    { id: 12, status: 'available', label:'CCS2',startY:250,startX:150 },
 
-    { id: 13, status: 'available', label: 'Type-1',startY:350,startX:0 },
-    { id: 14, status: 'error', label: 'Type-2',startY:350,startX:50 },
-    { id: 15, status: 'available', label: 'CSS',startY:350,startX:100 },
-    { id: 16, status: 'occupied', label: 'CHAdeMO',startY:350,startX:150 },
+    { id: 13, status: 'available', label:'CCS2',startY:350,startX:0 },
+    { id: 14, status: 'error', label:'CCS2',startY:350,startX:50 },
+    { id: 15, status: 'available', label:'CCS2',startY:350,startX:100 },
+    { id: 16, status: 'occupied', label:'CCS2',startY:350,startX:150 },
 
-    { id: 17, status: 'available', label: 'Type-2',startY:450,startX:0 },
-    { id: 18, status: 'error', label: 'CSS',startY:450,startX:50 },
-    { id: 19, status: 'occupied', label: 'CHAdeMO',startY:450,startX:100 },
+    { id: 17, status: 'available', label:'CCS2',startY:450,startX:0 },
+    { id: 18, status: 'error', label:'CCS2',startY:450,startX:50 },
+    { id: 19, status: 'occupied', label:'CCS2',startY:450,startX:100 },
 
-    { id: 20, status: 'available', label: 'Type-2',startY:550,startX:0 },
-    { id: 21, status: 'available', label: 'CSS',startY:550,startX:50 },
-    { id: 22, status: 'available', label: 'CHAdeMO',startY:550,startX:100 },
+    { id: 20, status: 'available', label:'CCS2',startY:550,startX:0 },
+    { id: 21, status: 'available', label:'CCS2',startY:550,startX:50 },
+    { id: 22, status: 'available', label:'CCS2',startY:550,startX:100 },
 
-    // { id: 23, status: 'occupied', label: 'CSS',startY:650,startX:0 },
-    // { id: 24, status: 'occupied', label: 'CHAdeMO',startY:650,startX:50 },
+    // { id: 23, status: 'occupied', label:'CCS2',startY:650,startX:0 },
+    // { id: 24, status: 'occupied', label:'CCS2',startY:650,startX:50 },
 
-    // { id: 25, status: 'available', label: 'CSS',startY:750,startX:0 },
-    // { id: 26, status: 'occupied', label: 'CHAdeMO',startY:750,startX:50 }
+    // { id: 25, status: 'available', label:'CCS2',startY:750,startX:0 },
+    // { id: 26, status: 'occupied', label:'CCS2',startY:750,startX:50 }
   ];
 
   const paths: Path[] = [

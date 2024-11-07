@@ -3,15 +3,16 @@ import React, { useState, useMemo } from 'react';
 import { ChevronDown, ChevronUp, ChevronLeft, ChevronRight, Search } from 'lucide-react';
 
 // Types
-type SessionStatus = "success" | "failed" | "charging" | "error";
+type SessionStatus = "active" | "pending" | "cancelled" | "completed";
 
 interface ChargingSession {
   session_id: string;
   depot_id: number;
   depot_name: string;
   user_id: string;
-  user_name: string;
-  user_email: string;
+  idTag: string;
+  total_usage: string;
+  total_duration: string;
   session_start: Date;
   session_end: Date;
   session_status: SessionStatus;
@@ -24,7 +25,7 @@ interface SortConfig {
 
 // Generate dummy data
 const generateDummyData = (): ChargingSession[] => {
-  const statuses: SessionStatus[] = ["success", "failed", "charging", "error"];
+  const statuses: SessionStatus[] = ["completed", "active", "pending", "cancelled"];
   const depotNames = ["KLCC Depot", "Pavilion Depot", "Sunway Depot", "Mid Valley Depot", "KL Sentral Depot"];
   
   return Array.from({ length: 15 }, (_, index) => ({
@@ -32,8 +33,9 @@ const generateDummyData = (): ChargingSession[] => {
     depot_id: Math.floor(Math.random() * 5) + 1,
     depot_name: depotNames[Math.floor(Math.random() * depotNames.length)],
     user_id: `USER${String(Math.floor(Math.random() * 1000)).padStart(3, '0')}`,
-    user_name: `User ${index + 1}`,
-    user_email: `user${index + 1}@example.com`,
+    idTag: `${Math.random().toString(36).substring(2,7)}`,
+    total_usage: `${String(Math.floor(Math.random() * 10000)).padStart(4, '0')} kWh`,
+    total_duration: `${Math.floor(Math.random() * 120)} min`,
     session_start: new Date(2024, 0, 1, Math.floor(Math.random() * 24), Math.floor(Math.random() * 60)),
     session_end: new Date(2024, 0, 1, Math.floor(Math.random() * 24), Math.floor(Math.random() * 60)),
     session_status: statuses[Math.floor(Math.random() * statuses.length)]
@@ -66,7 +68,7 @@ const ChargingSessionTable = () => {
     return sortedData.filter(item => {
       const matchesSearch = 
         item.depot_id.toString().includes(searchTerm) ||
-        item.user_name.toLowerCase().includes(searchTerm.toLowerCase());
+        item.idTag.toLowerCase().includes(searchTerm.toLowerCase());
 
       const matchesStatus = 
         !statusFilter || item.session_status === statusFilter;
@@ -91,10 +93,10 @@ const ChargingSessionTable = () => {
 
   const getStatusColor = (status: SessionStatus) => {
     const colors = {
-      success: 'bg-green-100 text-green-800',
-      failed: 'bg-red-100 text-red-800',
-      charging: 'bg-blue-100 text-blue-800',
-      error: 'bg-yellow-100 text-yellow-800'
+      completed: 'bg-green-100 text-green-800',
+      cancelled: 'bg-red-100 text-red-800',
+      active: 'bg-yellow-100 text-yellow-800',
+      pending: 'bg-gray-100 text-gray-800'
     };
     return colors[status];
   };
@@ -131,10 +133,10 @@ const ChargingSessionTable = () => {
           className="px-4 py-2 border rounded-lg"
         >
           <option value="">All Statuses</option>
-          <option value="success">Success</option>
-          <option value="failed">Failed</option>
-          <option value="charging">Charging</option>
-          <option value="error">Error</option>
+          <option value="active">Active</option>
+          <option value="completed">Completed</option>
+          <option value="cancelled">Cancelled</option>
+          <option value="pending">Pending</option>
         </select>
       </div>
 
@@ -171,8 +173,9 @@ const ChargingSessionTable = () => {
                 <td className="px-6 py-4 text-sm">{session.depot_id}</td>
                 <td className="px-6 py-4 text-sm">{session.depot_name}</td>
                 <td className="px-6 py-4 text-sm">{session.user_id}</td>
-                <td className="px-6 py-4 text-sm">{session.user_name}</td>
-                <td className="px-6 py-4 text-sm">{session.user_email}</td>
+                <td className="px-6 py-4 text-sm">{session.idTag}</td>
+                <td className="px-6 py-4 text-sm">{session.total_usage}</td>
+                <td className="px-6 py-4 text-sm">{session.total_duration}</td>
                 <td className="px-6 py-4 text-sm">{formatDate(session.session_start)}</td>
                 <td className="px-6 py-4 text-sm">{formatDate(session.session_end)}</td>
                 <td className="px-6 py-4">

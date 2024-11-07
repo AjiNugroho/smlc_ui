@@ -148,7 +148,7 @@ const TimeSeriesChart =()=> {
             Showing total sessions for the last 3 months
           </CardDescription>
         </div>
-        <div className="flex">
+        {/* <div className="flex">
           {["desktop", "mobile"].map((key) => {
             const chart = key as keyof typeof chartConfig
             return (
@@ -167,7 +167,7 @@ const TimeSeriesChart =()=> {
               </button>
             )
           })}
-        </div>
+        </div> */}
       </CardHeader>
       <CardContent className="px-2 sm:p-6">
         <ChartContainer

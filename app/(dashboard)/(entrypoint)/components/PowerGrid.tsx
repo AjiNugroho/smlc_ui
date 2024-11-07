@@ -9,9 +9,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 type MeterData = {
     timestamp: string;
-    power: number;
-    voltage: number;
-    current: number;
+    powerMax: number;
+    powerUsage: number;
+    // current: number;
 };
 
 const PowerGrid = () => {
@@ -26,9 +26,9 @@ const PowerGrid = () => {
         setGridData(prev => {
                 const newData = [...prev, {
                 timestamp: now,
-                power: Math.random() * 100 + 400,
-                voltage: Math.random() * 10 + 220,
-                current: Math.random() * 20 + 80,
+                powerMax:  600,
+                powerUsage: Math.random() * 300 + 100,
+                // current: Math.random() * 20 + 80,
                 }].slice(-20);
                 return newData;
             });
@@ -57,9 +57,9 @@ const PowerGrid = () => {
                         <YAxis />
                         <Tooltip />
                         <Legend />
-                        <Line type="monotone" dataKey="power" stroke="#8884d8" name="Power (kW)" />
-                        <Line type="monotone" dataKey="voltage" stroke="#82ca9d" name="Voltage (V)" />
-                        <Line type="monotone" dataKey="current" stroke="#ffc658" name="Current (A)" />
+                        <Line type="monotone" dataKey="powerMax" stroke="#f7020f" name="Limit (kW)" />
+                        <Line type="monotone" dataKey="powerUsage" stroke="#02aef7" name="Fleet Peak Load (kW)" />
+                        {/* <Line type="monotone" dataKey="current" stroke="#ffc658" name="Current (A)" /> */}
                     </LineChart>
                     </ResponsiveContainer>
                 </div>

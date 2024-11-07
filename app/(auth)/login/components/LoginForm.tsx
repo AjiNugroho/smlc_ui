@@ -18,7 +18,8 @@ const LoginPage=()=> {
 
     if (result.success) {
       // Redirect to the original destination or dashboard
-      const redirectTo = searchParams.get('redirect') || '/depots'
+      // const redirectTo = searchParams.get('redirect') || '/depots'
+      const redirectTo = '/depots'
       router.push(redirectTo)
     } else {
       console.log(error)
@@ -28,9 +29,9 @@ const LoginPage=()=> {
 
   return (
     <div className="flex flex-col items-center justify-center w-full">
-      <form action={handleSubmit} className="space-y-4 w-full max-w-md p-8">
+      <form action={handleSubmit} className="space-y-4 w-full max-w-md p-8 text-gray-700">
         <div>
-          <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+          <label htmlFor="email" className="block text-sm font-medium ">
             Email
           </label>
           <input
@@ -43,7 +44,7 @@ const LoginPage=()=> {
         </div>
         
         <div>
-          <label htmlFor="password" className="block text-sm font-medium text-gray-700">
+          <label htmlFor="password" className="block text-sm font-medium">
             Password
           </label>
           <input

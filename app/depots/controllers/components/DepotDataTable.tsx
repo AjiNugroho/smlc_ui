@@ -9,6 +9,7 @@ import {
   Search,
   SlidersHorizontal
 } from 'lucide-react';
+import Link from 'next/link';
 
 interface Depot {
   id: number;
@@ -28,7 +29,7 @@ interface SortConfig {
 }
 
 const DepotDataTable = () => {
-//   const router = useRouter();
+  // const router = useRouter();
   const [data] = useState<Depot[]>([
     {
       id: 1,
@@ -223,10 +224,10 @@ const DepotDataTable = () => {
     }));
   };
 
-  const handleRowClick = (id: number) => {
-    console.log('hehehehhe')
-    // router.push(`/depot/${id}`);
-  };
+  // const handleRowClick = (id: number) => {
+  //   console.log(id)
+  //   // router.push(`/`);
+  // };
 
   return (
     <div className="w-full p-4">
@@ -325,12 +326,21 @@ const DepotDataTable = () => {
                   </td>
                 ))}
                 <td className="px-6 py-4">
-                  <button
+                  <Link
+                    href={'/'}
+                    target="_blank"
+                    className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+                  >
+                    View Site
+                  </Link>
+                  {/* <button
+                    
                     onClick={() => handleRowClick(item.id)}
                     className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
                   >
+                    <
                     View Details
-                  </button>
+                  </button> */}
                 </td>
               </tr>
             ))}

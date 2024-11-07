@@ -18,12 +18,17 @@ const HeaderDepot = () => {
     const formattedDate = format(currentDate, "dd MMM yyyy");
     const formattedTime = format(currentDate, "OOOO");
   return (
-    <div className='w-full bg-white shadow-lg rounded-sm min-h-20 flex justify-end items-center px-8 gap-4'>
-        <div className='flex flex-col'>
-            <span>{`${formattedDate}`}</span>
-            <span className='text-xs font-thin'>{`${formattedTime}`}</span>
+    <div className='w-full bg-white shadow-lg rounded-sm min-h-20 flex justify-between items-center px-8 gap-4'>
+        <div className='font-bold text-2xl text-[#008ccc]'>
+            Prasarana Depo Management System
         </div>
-        <DropDownUser/>
+        <div className='flex items-center gap-4'>
+            <div className='flex flex-col'>
+                <span>{`${formattedDate}`}</span>
+                <span className='text-xs font-thin'>{`${formattedTime}`}</span>
+            </div>
+            <DropDownUser/>
+        </div>
     </div>
   )
 }
