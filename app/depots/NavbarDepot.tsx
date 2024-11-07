@@ -27,12 +27,12 @@ const items = [
       icon: FaHome,
     },
     {
-        title: "Controllers",
+        title: "Depots",
         url: "/depots/controllers",
         icon: MdOutlineLaptopChromebook,
     },
     {
-      title: "Charge Usages",
+      title: "Charge Sessions",
       url: "/depots/chargeusages",
       icon: FaChargingStation,
     },
