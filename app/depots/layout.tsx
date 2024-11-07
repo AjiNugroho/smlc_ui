@@ -16,7 +16,7 @@ export default function DepotLayout({ children }: { children: ReactNode }) {
                   <div className='flex'>
                       <HeaderDepot/>
                   </div>
-                  <main className="flex-1 p-6 overflow-auto">
+                  <main className="flex-1 p-6 overflow-auto bg-gray-100">
                   {children}
                   </main>
                   <FooterDepots/>

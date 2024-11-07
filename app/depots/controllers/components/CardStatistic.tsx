@@ -10,28 +10,28 @@ const CardStatistic = () => {
         {
           title:'Depots',
           value:100,
-          icon:<FaBus size={14}/>,
+          icon:<FaBus size={24}/>,
 
         },
         {
           title:'Connectors',
           value:400,
-          icon:<MdOutlineElectricalServices size={14}/>
+          icon:<MdOutlineElectricalServices size={24}/>
         },
         {
           title:'Active Sessions',
           value:62,
-          icon:<GiCharging size={14}/>,
+          icon:<GiCharging size={24}/>,
 
         },
         {
           title:'Alerts',
           value:5,
-          icon:<MdBusAlert size={14}/>
+          icon:<MdBusAlert size={24}/>
         }
       ]
     return (
-        <div className='w-[15%] grid grid-cols-1 px-6 gap-3'>
+        <div className='w-[20%] grid grid-cols-1 gap-3'>
             { cardItemContent.map(item=>(
                 <CardItems 
                 key={item.title}

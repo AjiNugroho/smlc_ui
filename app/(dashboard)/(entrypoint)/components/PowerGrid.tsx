@@ -46,10 +46,10 @@ const PowerGrid = () => {
     return (
         <Card>
             <CardHeader>
-            <CardTitle>Power Grid Overview</CardTitle>
+                <CardTitle className='font-semibold text-lg'>Power Grid Overview</CardTitle>
             </CardHeader>
             <CardContent>
-                <div className="h-64 block">
+                <div className="h-[350px] block">
                     <ResponsiveContainer width="100%" height="100%">
                     <LineChart data={gridData}>
                         <CartesianGrid strokeDasharray="3 3" />

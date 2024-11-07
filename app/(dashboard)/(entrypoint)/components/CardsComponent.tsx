@@ -13,33 +13,33 @@ const CardsComponent = () => {
       title:'Total Revenue',
       value:10000,
       delta:20,
-      icon:<PiMoneyDuotone/>,
+      icon:<PiMoneyDuotone  size={24}/>,
       unit:'MYR'
     },
     {
       title:'Total Sessions',
       value:3750,
       delta:15,
-      icon:<MdElectricCar/>
+      icon:<MdElectricCar   size={24}/>
     },
     {
       title:'Energy Delivered',
       value:8902,
       delta:20,
-      icon:<GiElectric/>,
+      icon:<GiElectric   size={24}/>,
       unit:'kWh'
     },
     {
       title:'Failure',
       value:5,
       delta:5,
-      icon:<IoIosFlashOff/>
+      icon:<IoIosFlashOff   size={24}/>
     },
     {
       title:'Average Utilization',
       value:70,
       delta:20,
-      icon:<RiPercentFill/>,
+      icon:<RiPercentFill   size={24}/>,
       unit:'%'
     }
   ]
@@ -74,7 +74,7 @@ const CardItems = (props:cardItemProps) =>{
           <CardTitle className="text-sm font-medium">
             {props.title}
           </CardTitle>
-          <div className='p-1 rounded-full border-2 border-gray-500 bg-[#008ccc] text-white'>{props.icon}</div>
+          <div className='p-1 rounded-full bg-[#008ccc] text-white'>{props.icon}</div>
         </CardHeader>
         <CardContent>
           <div className="text-2xl font-bold">{`${props.unit} ${props.value}`}</div>
