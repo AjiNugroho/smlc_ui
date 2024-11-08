@@ -54,6 +54,7 @@ const NavbarDepot = () => {
   return (
     <Sidebar collapsible='icon' className='border-none shadow-xl'>
         <SidebarHeader className='h-12 w-full flex items-center relative text-[#008ccc] rounded-r-lg'>
+                <Link href='/depots'>
                 <Image
                     className={` ${state==='expanded'?'block':'hidden'}`}
                     src={prasLogo}
@@ -61,6 +62,7 @@ const NavbarDepot = () => {
                     width={160}
                     height={80}
                     />
+                  </Link>
             {/* <p className={` ${state==='expanded'?'block':'hidden'} text-xl font-semibold`}>JomDepot</p> */}
             <div className={`p-1 text-2xl rounded-lg bg-[#008ccc] text-white absolute ${state==='expanded'?'right-0 ':'top-3 right-2'} `} onClick={toggleSidebar}>
                 {state==='expanded'?<BiChevronLeft/>:<BiChevronRight/>}
