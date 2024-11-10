@@ -180,7 +180,7 @@ const Groups = ({data}:{data:groupsViewData})=>{
         <div className='flex flex-col w-full gap-2'>
             <div className='flex items-center gap-2'>
                 
-                <p className='px-2 py-1 bg-[#008ccc] text-white rounded-xl'>{data.groupName}</p>
+                <p className='px-2 py-1 bg-[#0035a3] text-white rounded-xl'>{data.groupName}</p>
                 <div className='flex items-center gap-1 px-2 py-1 bg-green-400 rounded-xl text-white'>
                     <ImPowerCord/>
                     <p>{data.meterName}</p>
@@ -208,7 +208,7 @@ const EvseCard =({data}:{data:groupsViewData['evses']})=>{
                         <div className='w-full'>
                             <div className='flex justify-between items-center'>
                                 <p>{evse.serialNumber}</p>
-                                <p className='py-2 px-3 rounded-md border shadow-sm bg-[#008ccc] text-white'>{evse.connectors}</p>
+                                <p className='py-2 px-3 rounded-md border shadow-sm bg-[#0035a3] text-white'>{evse.connectors}</p>
                             </div>
                             <div className='flex gap-4'>
                                 <p>

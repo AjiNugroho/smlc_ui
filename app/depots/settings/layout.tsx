@@ -4,19 +4,19 @@ import { SidebarNav } from "@/app/(dashboard)/settings/components/side-nav"
 const sidebarNavItems = [
     {
       title: "Profile",
-      href: "/settings",
+      href: "/depots/settings",
     },
     {
       title: "Organization",
-      href: "/settings/organization",
+      href: "/depots/settings/organization",
     },
     {
       title: "User Management",
-      href: "/settings/user",
+      href: "/depots/settings/user",
     },
     {
       title: "Role & Permission",
-      href: "/settings/permission",
+      href: "/depots/settings/permission",
     },
   ]
 

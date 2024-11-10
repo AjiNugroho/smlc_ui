@@ -13,7 +13,7 @@ const PaginationDummy = () => {
     <Pagination>
         <PaginationContent>
             <PaginationItem>
-                <PaginationLink isActive href="#" className='bg-[#008ccc] text-white '>1</PaginationLink>
+                <PaginationLink isActive href="#" className='bg-[#0035a3] text-white '>1</PaginationLink>
             </PaginationItem>
             <PaginationItem>
                 <PaginationLink href="#">2</PaginationLink>

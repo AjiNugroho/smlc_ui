@@ -19,8 +19,8 @@ const HeaderDepot = () => {
     const formattedTime = format(currentDate, "OOOO");
   return (
     <div className='w-full bg-white shadow-lg rounded-sm min-h-20 flex justify-between items-center px-8 gap-4'>
-        <div className='font-bold text-2xl text-[#008ccc]'>
-            Prasarana Depo Management System
+        <div className='font-bold text-2xl text-[#0035a3]'>
+            Prasarana Depot Management System
         </div>
         <div className='flex items-center gap-4'>
             <div className='flex flex-col'>

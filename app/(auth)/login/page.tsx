@@ -9,8 +9,8 @@ const page = () => {
     <div className='w-screen h-screen flex justify-center items-center bg-gray-200'>
         <div className='flex w-[80%] h-[90%] p-4 border-gray-200 border-2 rounded-3xl bg-white'>
             <div className='w-2/3 flex flex-col  items-center justify-center'>
-                <p className='text-[#008ccc] text-5xl font-extrabold'>Prasarana Bus Depo</p>
-                <p className='text-[#008ccc] text-2xl font-extrabold mt-2'>Charging Management System</p>
+                <p className='text-[#0035a3] text-5xl font-extrabold'>Prasarana Bus Depot</p>
+                <p className='text-[#0035a3] text-2xl font-extrabold mt-2'>Charge Management System</p>
                 <Image
                 src={busImage}
                 alt='welcome image'
@@ -19,7 +19,7 @@ const page = () => {
                 />
             </div>
             <div className='w-1/3 h-full p-1 gap-1'>
-                <div className='bg-gray-100 shadow-md w-full h-full rounded-3xl flex flex-col items-center justify-center text-[#008ccc]'>
+                <div className='bg-gray-100 shadow-md w-full h-full rounded-3xl flex flex-col items-center justify-center text-[#0035a3]'>
                     <Image
                     src={logoPrasaran}
                     alt='logo'

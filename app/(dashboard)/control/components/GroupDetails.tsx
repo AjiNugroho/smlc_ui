@@ -137,8 +137,8 @@ const GroupDetails = () => {
 
         <Card className='max-w-[360px]'>
           <CardHeader>
-            <CardTitle className='flex items-center'>
-              <UtilityPole/> Grid
+            <CardTitle className='flex items-center text-[#0035a3] gap-2'>
+              <UtilityPole className=''/> Grid
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -171,7 +171,7 @@ const GroupDetails = () => {
         {SmartMeters.map((meter,index)=>(
           <Card key={index} className='w-[360px]'>
           <CardHeader>
-            <CardTitle className='flex items-center'>
+            <CardTitle className='flex items-center text-[#0035a3] gap-2'>
               <BiSolidMicrochip/> {meter.name}
             </CardTitle>
           </CardHeader>
@@ -217,7 +217,7 @@ const GroupDetails = () => {
         {chargers.map((meter,index)=>(
           <Card key={index} className='min-w-[360px]'>
           <CardHeader>
-            <CardTitle className='flex items-center'>
+            <CardTitle className='flex items-center text-[#0035a3] gap-2'>
               
               <RiChargingPile2Fill/> {meter.serial}
             </CardTitle>

@@ -31,7 +31,7 @@ const chartConfig = {
   },
   safari: {
     label: "Utility",
-    color: "hsl(var(--chart-2))",
+    color: "#0035a3",
   },
 } satisfies ChartConfig
 
@@ -100,7 +100,7 @@ const UtilityRatio=()=> {
           Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
         </div>
         <div className="leading-none text-muted-foreground">
-          Total CO2 reductions for the last 3 months
+          Total CO2 reduction for the last 3 months
         </div>
       </CardFooter>
     </Card>

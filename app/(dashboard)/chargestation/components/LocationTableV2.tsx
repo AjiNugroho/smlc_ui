@@ -51,11 +51,6 @@ const LocationTableV2 = ({ data}: EVChargerTableProps) => {
     const endIndex = startIndex + itemsPerPage;
     const currentData = filteredData.slice(startIndex, endIndex);
 
-    // Format numbers with commas
-    const formatNumber = (num: number): string => {
-        return num.toLocaleString();
-    };
-
     // Format status with color
     const getStatusColor = (status: string): string => {
         switch (status.toLowerCase()) {

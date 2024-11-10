@@ -8,9 +8,9 @@ const page = () => {
   return (
     <Tabs defaultValue='sitemap'>
       <TabsList className='bg-white'>
-        <TabsTrigger value='sitemap' className='data-[state=active]:bg-[#008ccc] data-[state=active]:text-white'>Site Configuration</TabsTrigger>
-        <TabsTrigger value='config' className='data-[state=active]:bg-[#008ccc] data-[state=active]:text-white'>Controller</TabsTrigger>
-        <TabsTrigger value='profiles' className='data-[state=active]:bg-[#008ccc] data-[state=active]:text-white'>Charging Profiles</TabsTrigger>
+        <TabsTrigger value='sitemap' className='data-[state=active]:bg-[#0035a3] data-[state=active]:text-white'>Site Configuration</TabsTrigger>
+        <TabsTrigger value='config' className='data-[state=active]:bg-[#0035a3] data-[state=active]:text-white'>Controller</TabsTrigger>
+        <TabsTrigger value='profiles' className='data-[state=active]:bg-[#0035a3] data-[state=active]:text-white'>Charging Profiles</TabsTrigger>
       </TabsList>
   
       <TabsContent value='sitemap'>

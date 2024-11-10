@@ -131,13 +131,13 @@ const TimeSeriesChart =()=> {
   const [activeChart, setActiveChart] =
     React.useState<keyof typeof chartConfig>("desktop")
 
-  const total = React.useMemo(
-    () => ({
-      desktop: chartData.reduce((acc, curr) => acc + curr.desktop, 0),
-      mobile: chartData.reduce((acc, curr) => acc + curr.mobile, 0),
-    }),
-    []
-  )
+  // const total = React.useMemo(
+  //   () => ({
+  //     desktop: chartData.reduce((acc, curr) => acc + curr.desktop, 0),
+  //     mobile: chartData.reduce((acc, curr) => acc + curr.mobile, 0),
+  //   }),
+  //   []
+  // )
 
   return (
     <Card className="w-full">
@@ -155,7 +155,7 @@ const TimeSeriesChart =()=> {
               <button
                 key={chart}
                 data-active={activeChart === chart}
-                className="relative z-30 flex flex-1 flex-col justify-center gap-1 border-t px-6 py-4 text-left even:border-l data-[active=true]:bg-[#008ccc] data-[active=true]:text-white sm:border-l sm:border-t-0 sm:px-8 sm:py-6"
+                className="relative z-30 flex flex-1 flex-col justify-center gap-1 border-t px-6 py-4 text-left even:border-l data-[active=true]:bg-[#0035a3] data-[active=true]:text-white sm:border-l sm:border-t-0 sm:px-8 sm:py-6"
                 onClick={() => setActiveChart(chart)}
               >
                 <span className="text-xs">
@@ -212,7 +212,7 @@ const TimeSeriesChart =()=> {
                 />
               }
             />
-            <Bar dataKey={activeChart} fill={`var(--color-${activeChart})`} />
+            <Bar dataKey={activeChart} fill={`#0035a3`} />
           </BarChart>
         </ChartContainer>
       </CardContent>

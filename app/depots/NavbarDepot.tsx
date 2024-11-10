@@ -53,7 +53,7 @@ const NavbarDepot = () => {
     
   return (
     <Sidebar collapsible='icon' className='border-none shadow-xl'>
-        <SidebarHeader className='h-12 w-full flex items-center relative text-[#008ccc] rounded-r-lg'>
+        <SidebarHeader className='h-12 w-full flex items-center relative text-[#0035a3] rounded-r-lg'>
                 <Link href='/depots'>
                 <Image
                     className={` ${state==='expanded'?'block':'hidden'}`}
@@ -64,7 +64,7 @@ const NavbarDepot = () => {
                     />
                   </Link>
             {/* <p className={` ${state==='expanded'?'block':'hidden'} text-xl font-semibold`}>JomDepot</p> */}
-            <div className={`p-1 text-2xl rounded-lg bg-[#008ccc] text-white absolute ${state==='expanded'?'right-0 ':'top-3 right-2'} `} onClick={toggleSidebar}>
+            <div className={`p-1 text-2xl rounded-lg bg-[#0035a3] text-white absolute ${state==='expanded'?'right-0 ':'top-3 right-2'} `} onClick={toggleSidebar}>
                 {state==='expanded'?<BiChevronLeft/>:<BiChevronRight/>}
             </div>
 
@@ -76,7 +76,7 @@ const NavbarDepot = () => {
             <SidebarMenu>
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton asChild isActive={item.url === pathName} className='hover:bg-gray-200 h-10  data-[active=true]:bg-[#008ccc] data-[active=true]:text-white'>
+                  <SidebarMenuButton asChild isActive={item.url === pathName} className='hover:bg-gray-200 h-10  data-[active=true]:bg-[#0035a3] data-[active=true]:text-white'>
                     <Link href={item.url}>
                       <item.icon />
                       <span>{item.title}</span>

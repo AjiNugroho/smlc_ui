@@ -3,14 +3,12 @@ import React from 'react'
 import {PiChargingStationFill } from "react-icons/pi";
 import { GiElectric } from "react-icons/gi";
 import { MdElectricCar } from "react-icons/md";
-import { IoIosFlashOff } from "react-icons/io";
-import { RiPercentFill } from "react-icons/ri";
-
+import { RiPercentFill,RiAlertFill } from "react-icons/ri";
 
 const CardsComponent = () => {
   const cardItemContent = [
     {
-      title:'Total Charger',
+      title:'Total Chargers',
       value:3245,
       delta:20,
       icon:<PiChargingStationFill  size={24}/>
@@ -25,14 +23,14 @@ const CardsComponent = () => {
       title:'Energy Delivered',
       value:8902,
       delta:20,
-      icon:<GiElectric   size={24}/>,
+      icon:<GiElectric size={24}/>,
       unit:'kWh'
     },
     {
-      title:'Failure',
+      title:'Alerts',
       value:5,
       delta:5,
-      icon:<IoIosFlashOff   size={24}/>
+      icon:<RiAlertFill   size={24}/>
     },
     {
       title:'Average Utilization',
@@ -73,10 +71,10 @@ const CardItems = (props:cardItemProps) =>{
           <CardTitle className="text-sm font-medium">
             {props.title}
           </CardTitle>
-          <div className='p-1 rounded-full bg-[#008ccc] text-white'>{props.icon}</div>
+          <div className='p-1 rounded-full bg-[#0035a3] text-white'>{props.icon}</div>
         </CardHeader>
         <CardContent>
-          <div className="text-2xl font-bold">{`${props.unit} ${props.value}`}</div>
+          <div className="text-2xl font-bold">{`${props.value} ${props.unit} `}</div>
           <p className="text-xs text-muted-foreground">
             {`+${props.delta}% from last month`}
           </p>

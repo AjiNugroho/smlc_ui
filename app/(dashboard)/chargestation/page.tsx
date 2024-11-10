@@ -68,9 +68,9 @@ const page = () => {
   return (
     <Tabs defaultValue='chargers'>
       <TabsList className='bg-white'>
-        <TabsTrigger value='chargers' className='data-[state=active]:bg-[#008ccc] data-[state=active]:text-white'>Charge Stations</TabsTrigger>
-        <TabsTrigger value='connectors' className='data-[state=active]:bg-[#008ccc] data-[state=active]:text-white'>Connectors</TabsTrigger>
-        <TabsTrigger value='sessions' className='data-[state=active]:bg-[#008ccc] data-[state=active]:text-white'>Sessions</TabsTrigger>
+        <TabsTrigger value='chargers' className='data-[state=active]:bg-[#0035a3] data-[state=active]:text-white'>Charge Stations</TabsTrigger>
+        <TabsTrigger value='connectors' className='data-[state=active]:bg-[#0035a3] data-[state=active]:text-white'>Connectors</TabsTrigger>
+        <TabsTrigger value='sessions' className='data-[state=active]:bg-[#0035a3] data-[state=active]:text-white'>Sessions</TabsTrigger>
       </TabsList>
       <TabsContent value='chargers'> 
         <div className='w-full pt-8'>

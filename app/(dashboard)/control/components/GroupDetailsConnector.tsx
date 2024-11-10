@@ -85,7 +85,7 @@ const GroupDetailsConnector = () => {
         <AccordionTrigger>
             <div className='flex items-center gap-4'>
                 Connector 2
-                <span className='p-1 text-sm rounded-md bg-[#008ccc] text-white min-w-[100px]'>available</span>
+                <span className='p-1 text-sm rounded-md bg-[#0035a3] text-white min-w-[100px]'>available</span>
             </div>
         </AccordionTrigger>
         <AccordionContent className='flex flex-col ps-4'>

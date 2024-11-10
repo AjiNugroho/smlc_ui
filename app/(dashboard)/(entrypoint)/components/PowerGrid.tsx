@@ -58,7 +58,7 @@ const PowerGrid = () => {
                         <Tooltip />
                         <Legend />
                         <Line type="monotone" dataKey="powerMax" stroke="#f7020f" name="Limit (kW)" />
-                        <Line type="monotone" dataKey="powerUsage" stroke="#02aef7" name="Fleet Peak Load (kW)" />
+                        <Line type="monotone" dataKey="powerUsage" stroke="#0035a3" name="Fleet Peak Load (kW)" />
                         {/* <Line type="monotone" dataKey="current" stroke="#ffc658" name="Current (A)" /> */}
                     </LineChart>
                     </ResponsiveContainer>

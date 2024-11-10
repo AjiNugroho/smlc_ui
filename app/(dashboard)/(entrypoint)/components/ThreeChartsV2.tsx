@@ -1,7 +1,6 @@
 'use client'
-import React, { useState, useEffect, FC } from 'react';
+import React, { useState, FC } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { GrSelection } from "react-icons/gr";
 import { GiRadioTower } from "react-icons/gi";
 import { BiSolidMicrochip } from "react-icons/bi";
 import { FaChargingStation } from "react-icons/fa6";
@@ -32,7 +31,7 @@ interface Path {
 }
 
 const TreeChartsV2: FC = () => {
-  const [activePaths, setActivePaths] = useState<number[]>([]);
+  // const [activePaths, setActivePaths] = useState<number[]>([]);
   const [hoveredNode, setHoveredNode] = useState<Node | null>(null);
 
   const nodes: Node[] = [
@@ -105,15 +104,15 @@ const TreeChartsV2: FC = () => {
 
   ];
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActivePaths((prev) => {
-        if (prev.length >= paths.length) return [];
-        return [...prev, prev.length];
-      });
-    }, 300);
-    return () => clearInterval(interval);
-  }, []);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setActivePaths((prev) => {
+  //       if (prev.length >= paths.length) return [];
+  //       return [...prev, prev.length];
+  //     });
+  //   }, 300);
+  //   return () => clearInterval(interval);
+  // }, [ ]);
 
   const getStatusColor = (status: string) => {
     switch (status) {
@@ -146,7 +145,7 @@ const TreeChartsV2: FC = () => {
               {paths.map((path, index) => {
                   const startNode = nodes.find((n) => n.id === path.from);
                   const endNode = nodes.find((n) => n.id === path.to);
-                  const isActive = activePaths.includes(index);
+                  // const isActive = activePaths.includes(index);
 
                   if (!startNode || !endNode) return null;
 
@@ -205,7 +204,7 @@ const TreeChartsV2: FC = () => {
               );
               })}
 
-              {connectors.map((connector, index) => 
+              {connectors.map((connector) => 
                   (
                   <g key={`connector-${connector.id}`}>
                       <circle

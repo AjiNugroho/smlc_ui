@@ -186,7 +186,7 @@ const ChargingSessionTable = () => {
                 <td className="px-6 py-4">
                   <button
                     onClick={() => console.log('button hit', session.session_id)}
-                    className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+                    className="px-4 py-2 bg-[#0035a3] text-white rounded-lg hover:bg-blue-700"
                   >
                     View
                   </button>
@@ -215,7 +215,7 @@ const ChargingSessionTable = () => {
               key={page}
               onClick={() => setCurrentPage(page)}
               className={`px-4 py-2 border rounded-lg ${
-                currentPage === page ? 'bg-blue-600 text-white' : 'hover:bg-gray-50'
+                currentPage === page ? 'bg-[#0035a3] text-white' : 'hover:bg-gray-50'
               }`}
             >
               {page}

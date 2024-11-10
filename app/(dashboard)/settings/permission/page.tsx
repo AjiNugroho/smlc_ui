@@ -1,17 +1,7 @@
 
 import { Separator } from '@/components/ui/separator'
 import React from 'react'
-import {
-    Select,
-    SelectContent,
-    SelectGroup,
-    SelectItem,
-    SelectLabel,
-    SelectTrigger,
-    SelectValue,
-  } from "@/components/ui/select"
 import { Button } from '@/components/ui/button'
-import { IoMdAddCircle } from "react-icons/io";
 import RolePermissionManager from '../components/RolePermission';
 import { IoAddSharp } from "react-icons/io5";
 

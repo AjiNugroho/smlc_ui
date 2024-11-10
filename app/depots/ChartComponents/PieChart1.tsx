@@ -31,7 +31,7 @@ const chartConfig = {
   },
   safari: {
     label: "Safari",
-    color: "hsl(var(--chart-2))",
+    color: "#0035a3",
   },
 } satisfies ChartConfig
 
@@ -39,7 +39,7 @@ const PieChart1=()=> {
   return (
     <Card className="flex flex-col">
       <CardHeader className="items-center pb-0">
-        <CardTitle>Tree Saved</CardTitle>
+        <CardTitle>Trees Saved</CardTitle>
         <CardDescription>August - October 2024</CardDescription>
       </CardHeader>
       <CardContent className="flex-1 pb-0">
@@ -84,7 +84,7 @@ const PieChart1=()=> {
                           y={(viewBox.cy || 0) + 24}
                           className="fill-muted-foreground"
                         >
-                          Tree saved
+                          Trees saved
                         </tspan>
                       </text>
                     )
@@ -100,7 +100,7 @@ const PieChart1=()=> {
           Trending up by 15.7% this month <TrendingUp className="h-4 w-4" />
         </div>
         <div className="leading-none text-muted-foreground">
-          Total tree saved for the last 3 months
+          Total trees saved for the last 3 months
         </div>
       </CardFooter>
     </Card>

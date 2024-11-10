@@ -19,8 +19,8 @@ const Header = () => {
     const formattedTime = format(currentDate, "OOOO");
   return (
     <div className='w-full bg-white shadow-lg rounded-sm min-h-20 flex justify-between items-center px-8 gap-4'>
-      <div className='text-2xl font-bold text-[#008ccc]'>
-        Prasarana Smart Depo Controller
+      <div className='text-2xl font-bold text-[#0035a3]'>
+        Prasarana Smart Depot Controller
       </div>
       <div className='flex items-center gap-4'>
         <div className='flex flex-col'>

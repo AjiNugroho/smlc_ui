@@ -7,9 +7,7 @@ import { SidebarProvider} from "@/components/ui/sidebar"
 export default function DashboardLayout({ children }: { children: ReactNode }) {
   return (
     <div className="min-h-screen flex">
-        <SidebarProvider
-            
-        >
+        <SidebarProvider>
             <Navbar/>
             {/* Main Content */}
             <div className="flex-1 flex flex-col">

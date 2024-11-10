@@ -59,8 +59,8 @@ const CardItems = (props:cardItemProps) =>{
             </CardTitle>
           </CardHeader>
           <CardContent className='flex justify-between '>
-            <div className="text-2xl font-bold text-[#008ccc]">{` ${props.value}`}</div>
-            <div className='p-2 rounded-full bg-[#008ccc] text-white flex items-center justify-center'>
+            <div className="text-2xl font-bold text-[#0035a3]">{` ${props.value}`}</div>
+            <div className='p-2 rounded-full bg-[#0035a3] text-white flex items-center justify-center'>
                 <span className=''>{props.icon}</span>
             </div>
           </CardContent>

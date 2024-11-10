@@ -9,7 +9,7 @@ const page = () => {
     return (
       <div className='w-full flex flex-col gap-8'>
         <div className='h-36 p-4 bg-white rounded-xl space-y-4'>
-          <p className='text-3xl font-semibold text-[#008ccc]'>Welcome to JomDepot !</p>
+          <p className='text-3xl font-semibold text-[#0035a3]'>Welcome to Prasarana Depot Management System !</p>
           <p className='text-gray-500'>{`Powering the future. Manage and optimize your EV charging stations. Let's charge ahead together`}</p>
         </div>
         <CardsComponent/>
