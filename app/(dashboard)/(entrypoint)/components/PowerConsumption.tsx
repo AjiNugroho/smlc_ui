@@ -51,7 +51,7 @@ const PowerConsumption = () => {
   }));
 
   return (
-    <Card className="w-full max-w-md">
+    <Card className="w-full">
       <CardHeader>
         <CardTitle className='font-semibold text-lg'>Power Consumption</CardTitle>
       </CardHeader>
