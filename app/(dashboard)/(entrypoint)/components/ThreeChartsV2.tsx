@@ -131,16 +131,7 @@ const TreeChartsV2: FC = () => {
         <CardContent className='w-full h-[800px]'> 
         <div className='w-full h-[800px]'>       
           <svg className="w-full h-full">
-              <defs>
-                  {/* Define the animation keyframes */}
-                  <animate
-                      id="dashedLine"
-                      attributeName="stroke-dashoffset"
-                      values="-10;0"
-                      dur="1s"
-                      repeatCount="indefinite"
-                  />
-                  </defs>
+             
 
               {paths.map((path, index) => {
                   const startNode = nodes.find((n) => n.id === path.from);
@@ -156,7 +147,7 @@ const TreeChartsV2: FC = () => {
                   <path
                       key={`path-${index}`}
                       d={`M ${startNode.x + 30} ${startNode.y} L ${midX} ${startNode.y} L ${midX} ${endNode.y} L ${endNode.x - 30} ${endNode.y}`}
-                      className="transition-all duration-300"
+                      className="transition-all duration-300 dashed-line"
                       fill="none"
                       // stroke={isActive ? "#3b82f6" : "#ddd"}
                       // strokeWidth={isActive ? "3" : "2"}
@@ -164,13 +155,7 @@ const TreeChartsV2: FC = () => {
                       strokeWidth="3"
                       strokeDasharray="5,5"
                   >
-                      <animate
-                      attributeName="stroke-dashoffset"
-                      from="10"
-                      to="0"
-                      dur="1s"
-                      repeatCount="indefinite"
-                      />
+                     
                   </path>
                   );
                   })
